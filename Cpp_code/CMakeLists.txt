@@ -26,6 +26,7 @@ endif()
 # Модулі (кожен — окрема бібліотека, залежності йдуть знизу вгору)
 add_subdirectory(src/core)      # карти, колода, ГВЧ
 add_subdirectory(src/eval)      # оцінка покерних комбінацій
+add_subdirectory(src/ui)        # консольний інтерфейс
 
 if(HOLDEM_BUILD_TESTS)
     enable_testing()
