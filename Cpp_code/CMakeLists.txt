@@ -28,4 +28,5 @@ add_subdirectory(src/core)      # карти, колода, ГВЧ
 
 if(HOLDEM_BUILD_TESTS)
     enable_testing()
+    add_subdirectory(tests)
 endif()
