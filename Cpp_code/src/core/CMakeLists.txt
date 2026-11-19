@@ -1,5 +1,5 @@
-add_library(poker_core
-        Card.cpp
-        Deck.cpp
+add_library(poker_eval
+        HandEvaluator.cpp
 )
-target_include_directories(poker_core PUBLIC ${PROJECT_SOURCE_DIR}/include)
+target_link_libraries(poker_eval PUBLIC poker_core)
+

@@ -23,8 +23,12 @@ else()
 endif()
 
 add_subdirectory(src/core)
+add_subdirectory(src/eval)
 
 if(HOLDEM_BUILD_TESTS)
     enable_testing()
     add_subdirectory(tests)
 endif()
+
+
+
