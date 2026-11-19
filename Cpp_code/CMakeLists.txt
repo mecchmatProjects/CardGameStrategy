@@ -1,9 +1,9 @@
 cmake_minimum_required(VERSION 3.16)
 
 project(TexasHoldem
-        VERSION 1.0.0
-        DESCRIPTION "Texas Hold'em simulator with optimal strategy analysis"
-        LANGUAGES CXX)
+    VERSION 1.0.0
+    DESCRIPTION "Texas Hold'em simulator with optimal strategy analysis"
+    LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -20,4 +20,4 @@ else()
     add_compile_options(-Wall -Wextra -Wpedantic -Wshadow)
 endif()
 
-
+add_subdirectory(src/core)
