@@ -1,1 +1,25 @@
+# Збірка
+build/
+cmake-build-*/
+out/
+CMakeUserPresets.json
+compile_commands.json
+
+# IDE
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+
+# Бінарники
 *.exe
+*.o
+*.obj
+*.a
+*.lib
+*.pdb
+
+# ОС
+.DS_Store
+Thumbs.db
