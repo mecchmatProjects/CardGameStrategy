@@ -8,24 +8,23 @@
 
 namespace poker {
 
-    class Deck {
-    public:
-        Deck();
-        explicit Deck(CardMask excluded);
+class Deck {
+public:
+    Deck();
+    explicit Deck(CardMask excluded);
 
-        void reset(CardMask excluded = 0);
+    void reset(CardMask excluded = 0);
 
-        void shuffle(Rng& rng);
+    void shuffle(Rng& rng);
 
-        Card deal();
+    Card deal();
 
-        std::size_t size() const { return cards_.size() - top_; }
-        bool empty() const { return size() == 0; }
+    std::size_t size() const { return cards_.size() - top_; }
+    bool empty() const { return size() == 0; }
 
-    private:
-        std::vector<Card> cards_;
-        std::size_t top_ = 0;
-    };
+private:
+    std::vector<Card> cards_;
+    std::size_t top_ = 0;
+};
 
 }
-
