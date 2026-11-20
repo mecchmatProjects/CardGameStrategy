@@ -4,6 +4,7 @@ add_executable(poker_tests
     test_evaluator.cpp
     test_pots.cpp
     test_analysis.cpp
+    test_bots.cpp
 )
 target_link_libraries(poker_tests PRIVATE poker_ai)
 
