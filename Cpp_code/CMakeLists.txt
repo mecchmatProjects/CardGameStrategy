@@ -25,6 +25,8 @@ endif()
 add_subdirectory(src/core)
 add_subdirectory(src/eval)
 add_subdirectory(src/game)
+add_subdirectory(src/analysis)
+add_subdirectory(src/ai)
 
 if(HOLDEM_BUILD_TESTS)
     enable_testing()
