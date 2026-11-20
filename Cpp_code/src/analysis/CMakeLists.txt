@@ -6,5 +6,6 @@ add_library(poker_analysis
     Recommendation.cpp
     BasicAdvisor.cpp
     Advisor.cpp
+    ExpertAdvisor.cpp
 )
 target_link_libraries(poker_analysis PUBLIC poker_game)
