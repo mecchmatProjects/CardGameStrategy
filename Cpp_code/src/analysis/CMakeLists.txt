@@ -1,6 +1,7 @@
 add_library(poker_analysis
     EquityCalculator.cpp
     Odds.cpp
+    PreflopChart.cpp
     HandRanking.cpp
     Recommendation.cpp
 )
