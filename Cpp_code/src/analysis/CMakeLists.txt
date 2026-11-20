@@ -4,5 +4,6 @@ add_library(poker_analysis
     PreflopChart.cpp
     HandRanking.cpp
     Recommendation.cpp
+    BasicAdvisor.cpp
 )
 target_link_libraries(poker_analysis PUBLIC poker_game)
