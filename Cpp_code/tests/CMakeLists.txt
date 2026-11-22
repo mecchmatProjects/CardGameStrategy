@@ -10,3 +10,6 @@ add_executable(poker_tests
 target_link_libraries(poker_tests PRIVATE poker_ai)
 
 add_test(NAME poker_tests COMMAND poker_tests)
+
+add_test(NAME cards_lab_smoke
+         COMMAND cards_lab --all --poker-n 20000 --pref-n 5000 --split-n 5000)
