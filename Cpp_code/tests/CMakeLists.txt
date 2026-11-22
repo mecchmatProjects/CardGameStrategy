@@ -6,8 +6,9 @@ add_executable(poker_tests
     test_game.cpp
     test_analysis.cpp
     test_bots.cpp
+    test_cards.cpp
 )
-target_link_libraries(poker_tests PRIVATE poker_ai)
+target_link_libraries(poker_tests PRIVATE poker_ai poker_cards)
 
 add_test(NAME poker_tests COMMAND poker_tests)
 
