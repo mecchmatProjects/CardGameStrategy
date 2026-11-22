@@ -1,9 +1,9 @@
 cmake_minimum_required(VERSION 3.16)
 
 project(TexasHoldem
-        VERSION 1.0.0
-        DESCRIPTION "Texas Hold'em simulator with optimal strategy analysis"
-        LANGUAGES CXX)
+    VERSION 1.0.0
+    DESCRIPTION "Texas Hold'em simulator with optimal strategy analysis"
+    LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -28,6 +28,7 @@ add_subdirectory(src/game)
 add_subdirectory(src/analysis)
 add_subdirectory(src/ai)
 add_subdirectory(src/ui)
+add_subdirectory(app)
 
 if(HOLDEM_BUILD_TESTS)
     enable_testing()
