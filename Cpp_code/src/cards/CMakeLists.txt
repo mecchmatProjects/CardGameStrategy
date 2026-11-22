@@ -1,6 +1,7 @@
 add_library(poker_cards
     PrefCard.cpp
     Decks.cpp
+    CardGame.cpp
     PokerTasks.cpp
     Preferans.cpp
 )
