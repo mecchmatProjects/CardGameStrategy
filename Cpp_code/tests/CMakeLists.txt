@@ -3,6 +3,7 @@ add_executable(poker_tests
     test_card.cpp
     test_evaluator.cpp
     test_pots.cpp
+    test_game.cpp
     test_analysis.cpp
     test_bots.cpp
 )
