@@ -1,0 +1,35 @@
+name: C++ (Cpp_code)
+
+on:
+  push:
+    paths: ['Cpp_code/**', '.github/workflows/cpp.yml']
+  pull_request:
+    paths: ['Cpp_code/**', '.github/workflows/cpp.yml']
+
+defaults:
+  run:
+    working-directory: Cpp_code
+
+jobs:
+  build-and-test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Linux GUI dependencies
+        if: runner.os == 'Linux'
+        run: sudo apt-get update && sudo apt-get install -y libxrandr-dev libxinerama-dev libxcursor-dev libxi-dev libgl1-mesa-dev
+
+      - name: Configure
+        run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+
+      - name: Build
+        run: cmake --build build --config Release --parallel
+
+      - name: Test
+        run: ctest --test-dir build -C Release --output-on-failure
